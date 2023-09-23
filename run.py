@@ -21,11 +21,11 @@ def get_ship_location():
     # Enter the row number between 1 to 5
     row = input('Please enter a ship row 1-5 ').upper()
     while row not in '12345':
-        print("Please enter a valid row ")
+        print("Please enter a valid ship row ")
         row = input('Please enter a ship row 1-5 ')
     # Enter the Ship column from A TO H
     column = input('Please enter a ship column A-E ').upper()
-    while column not in 'ABCDEFGH':
+    while column not in 'ABCDE':
         print("Please enter a valid column ")
         column = input('Please enter a ship column A-E ')
     return int(row)-1, let_to_num[column]
@@ -52,7 +52,7 @@ def count_hit_ships(board):
 
 create_ships(Hidden_Pattern)
 # print_board(Hidden_Pattern)
-turns = 10
+turns = 5
 while turns > 0:
     print('Welcome to Battleship')
     print_board(Guess_Pattern)
@@ -73,6 +73,4 @@ while turns > 0:
     print(' You have ' + str(turns) + ' turns remaining ')
     if turns == 0:
         print('Game Over ')
-
         break
-    
