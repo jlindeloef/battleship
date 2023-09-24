@@ -50,6 +50,9 @@ def count_hit_ships(board):
     return count
 
 
+def end_game():
+
+
 create_ships(Hidden_Pattern)
 # print_board(Hidden_Pattern)
 turns = 5
@@ -72,5 +75,5 @@ while turns > 0:
         break
     print(' You have ' + str(turns) + ' turns remaining ')
     if turns == 0:
-        print('Game Over ')
-        break
+        end_game()
+        
