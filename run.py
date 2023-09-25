@@ -74,8 +74,10 @@ while True:
     print(' You have ' + str(turns) + ' turns remaining ')
     if turns == 0:
         print('Game Over ')
-        check = input('Play Again Y/N ')
-        if check.upper() == "Y":
+        allowed_inputs = "yYnN"
+        user_input = input("Play again (Y/N)? ")
+        if user_input == "Y" or user_input == "y":
             continue
-        print("Bye...")
+        if user_input == "N" or user_input == "n":
+            print("Bye...")
         break
